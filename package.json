@@ -1,5 +1,5 @@
 {
-  "name": "next-revalidate-refresh-bug",
+  "name": "next-loading-revalidate-refresh-issue",
   "version": "0.1.0",
   "private": true,
   "scripts": {
