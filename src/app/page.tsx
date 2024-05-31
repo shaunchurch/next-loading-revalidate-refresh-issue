@@ -10,7 +10,9 @@ export default async function Home() {
   return (
     <main className="flex flex-col p-24 space-y-10">
       <DoServerThing />
-      <Suspense fallback={<div>Loading slow things...</div>}>
+      <Suspense
+        fallback={<div className="text-red-400">Loading slow things...</div>}
+      >
         <SlowComponent />
       </Suspense>
       <div>
@@ -21,10 +23,11 @@ export default async function Home() {
             revalidatePath is called.
           </li>
           <li>
-            The form state does not update the first time the action is run.
+            The form state does not update the first time the action is run. See
+            console log for state logging in the browser.
           </li>
           <li>
-            This is only a problem when a loading.tsx file is present and
+            This is only a problem when both a loading.tsx file is present and
             revalidatePath is called.
           </li>
           <li>
