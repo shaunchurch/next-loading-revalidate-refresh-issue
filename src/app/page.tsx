@@ -1,6 +1,7 @@
 import { DoServerThing } from "@/components/DoServerThings";
 import { SlowComponent } from "@/components/SlowComponent";
 import { delay } from "@/lib/delay";
+import Link from "next/link";
 import { Suspense } from "react";
 
 export const dynamic = "force-dynamic";
@@ -33,6 +34,16 @@ export default async function Home() {
           <li>
             Second time onwards, the form state updates correctly, and the
             slowcomponent does not reload.
+          </li>
+
+          <li>
+            Source code for this example:{" "}
+            <Link
+              href="https://github.com/shaunchurch/next-loading-revalidate-refresh-issue"
+              className="underline hover:text-zinc-400"
+            >
+              https://github.com/shaunchurch/next-loading-revalidate-refresh-issue
+            </Link>
           </li>
         </ul>
       </div>
